@@ -1,0 +1,26 @@
+<!DOCTYPE html>​
+<html lang="en">​
+
+<head>​
+    <meta charset="UTF-8">
+    <title>Vue JS</title>​
+</head>
+
+<div id="app">
+    <input type="number" v-model="age" @input="show=true" placeholder="type your age...">
+
+    <div v-show="show && age && age < 18">
+        <p v-if="age>14" v-text="message.default"></p>
+        <p v-else v-text="message.underage"></p>
+    </div>
+    <button v-if="show && age && age < 18" @click="show = false">Agree</button>
+
+</div>
+
+<body>​
+
+<script src="https://unpkg.com/vue"></script>
+<script src="./app.js"></script>
+</body>
+
+</html>
