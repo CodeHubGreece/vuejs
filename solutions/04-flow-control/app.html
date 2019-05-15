@@ -1,0 +1,27 @@
+<!DOCTYPE html>​
+<html lang="en">​
+
+<head>​
+    <meta charset="UTF-8">
+    <title>Vue JS</title>​
+</head>
+
+<div id="app">
+
+    <ul>
+        <li v-for="item in todos" :key="item.id">
+            <p>
+                <span v-text="item.title"></span><button v-if="!item.status" @click="item.status = true">Mark as completed</button>
+            </p>
+        </li>
+    </ul>
+
+</div>
+
+<body>​
+
+<script src="https://unpkg.com/vue"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
